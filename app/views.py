@@ -7,6 +7,7 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for
+import time
 
 
 ###
@@ -26,6 +27,10 @@ def about():
 
 @app.route('/profile/')
 def profile():
+    return render_template('profile.html')
+    
+def timeinfo():
+    return time.strftime("%a,%d %b %Y")
     
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
