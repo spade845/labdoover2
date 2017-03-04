@@ -24,11 +24,9 @@ def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
 
-
-###
-# The functions below should be applicable to all Flask apps.
-###
-
+@app.route('/profile/')
+def profile():
+    
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
     """Send your static text file."""
